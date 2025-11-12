@@ -1,3 +1,5 @@
+package oops;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -24,5 +26,21 @@ public class Main {
 
         BankAccount raviSavings2 = new BankAccount(raviSavings);
         raviSavings2.printDetails();
+
+        Student st = new Student(1, "Sandeep", 100, 22);
+        Student st1 = new Student(st);
+        Student st2 = st1;
+        st.showMarks();
+        // st and st1 -> DEEP
+        // st1 and st2 -> SHALLOW
+        // st and st2 -> INVALID QUES or DEEP
+
+        DemoClass demo = new DemoClass();
+        demo.showMarks(st);
+
+        ICECar iceCar = new ICECar();
+        iceCar.unlockCar();
     }
 }
+// Java does not support multiple inheritance with classes
+// Java does support multiple inheritance with interfaces

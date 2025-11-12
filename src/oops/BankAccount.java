@@ -1,3 +1,5 @@
+package oops;
+
 public class BankAccount {
     String accountNumber; // default
     public int accountBalance; // accessible anywhere
