@@ -38,8 +38,33 @@ public class Main {
         DemoClass demo = new DemoClass();
         demo.showMarks(st);
 
-        ICECar iceCar = new ICECar();
+        ICECar iceCar = new ICECar(); // new remote new tv
         iceCar.unlockCar();
+        iceCar.refuelCar();
+        iceCar.changeEngineOil();
+
+        Car c = new ICECar(); // old remote new tv // implicit casting
+        c.changeEngineOil();
+        c.unlockCar();
+        // c.refuelCar(); -- does not work, as the method is not available in parent
+        // -- pressing button in remote that does not exist
+
+        //ICECar ic = (ICECar) new Car(); // explicit casting // downcasting // not applicable
+
+        Car cObj = new ICECar(); // cObj ref variable contains address to ICECar obj
+        ICECar icObj = (ICECar) cObj; // icObj [ ref variable of type ICECar ] -> address of ICECar obj
+        // using new remote on new TV
+
+        Calculator calc = new Calculator();
+
+        calc.add(4,5);
+        calc.add(4, 45.5);
+        calc.add(5.5, 4);
+        calc.add(4.4, 5.5);
+
+        TurboCar tc = new TurboCar();
+        tc.startEngine();
+
     }
 }
 // Java does not support multiple inheritance with classes

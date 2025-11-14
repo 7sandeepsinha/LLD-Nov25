@@ -13,7 +13,11 @@ public class Car {
         System.out.println("Unlocking Car");
     }
 
-    private void changeEngineOil(){
+    public void changeEngineOil(){
         System.out.println("Changing Engine Oil");
+    }
+
+    public void startEngine(){
+        System.out.println("Engine starting in basic Car");
     }
 }
